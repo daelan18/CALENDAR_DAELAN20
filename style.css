@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: x-large;
+}
+
+/* Calendar Styles */
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.month {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(25% - 20px); /* Four months in a row */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.month h1 {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: -10px -10px 10px -10px; /* Adjust margin to align with border */
+}
+
+/* Days of the Week */
+.days {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin: 0 -10px 10px -10px; /* Adjust margin to align with border */
+}
+
+.days li {
+    width: 14.28%; /* 7 days in a week */
+    text-align: center;
+    padding: 5px 0;
+}
+
+/* Calendar Days */
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days li {
+    width: 14.28%; /* 7 days in a week */
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.days li:nth-child(7n+1) {
+    color: red; /* Sunday */
+}
+
+.days li:nth-child(7n) {
+    color: blue; /* Saturday */
+}
+
+.days li {
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.days li:hover {
+    background-color: #e0e0e0; /* Highlight on hover */
+}
+
+/* Empty Days */
+.days li:empty {
+    background-color: transparent;
+    border: none;
+}
